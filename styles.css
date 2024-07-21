@@ -17,7 +17,6 @@ body {
     position: fixed;
     top: 0;
     width: 99%;
-    background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px 0;
     color: rgb(79, 102, 216);
     z-index: 2;
@@ -25,10 +24,22 @@ body {
     margin-top: 6px;
 }
 
+@font-face {
+    font-family: 'Recoleta';
+    src: url('Fonts/recoleta-regulardemo.otf') format('truetype'),
+
+  }
+
 .header-content {
     text-align: center;
     color: #f0f0f0;
 }
+
+header h1 {
+    font-family: 'Recoleta', sans-serif;
+    font-size: 2.5em;
+}
+
 
 nav {
     position: absolute;
@@ -51,32 +62,41 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.5em 1em;
-    background-color: #444;
+    /* background-color: #444; */
+    box-shadow: 0 0 10px rgba(7, 112, 232, 0.449);
+
     border-radius: 5px;
+    
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    box-shadow: 0 0 20px rgba(0, 17, 255, 0.495);
+
+    background-color: #55555543;
 }
 
 .main-content {
-    margin-top: 120px; /* Add margin to move content below the fixed header */
-    width: 150%;
+    margin-top: 120px; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
-    padding-bottom: 60px; /* Add padding to prevent content from overlapping footer */
+    padding-bottom: 60px; 
+    color: #fff;
+    backdrop-filter: blur(50px);
+    
 }
 
 .container {
-    background-color: white;
+    /* background-color: white; */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(11, 67, 179, 0.574);
     width: 50%;
     margin: 20px 0;
     text-align: center;
+    background-color: rgba(243, 238, 238, 0.218);
 }
 
 .container h1 h1 {
@@ -108,13 +128,13 @@ input[type="text"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 input[type="datetime-local"] {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 button {
@@ -136,22 +156,16 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    color: #000000;
+    backdrop-filter: blur(1px);
+    
 }
 
-/* li {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
+
 
 li.completed {
     text-decoration: line-through;
-    background-color: #d4edda;
+    background-color: #2feb5b;
 }
 
 li button {
@@ -186,7 +200,7 @@ footer {
 }
 
 .translucent-footer {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(54, 53, 53, 0.648); 
     color: white;
     padding: 20px;
     text-align: center;
